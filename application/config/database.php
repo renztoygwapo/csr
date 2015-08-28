@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'csr_fund';
-$db['default']['password'] = 'csr_fund';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'mysql';
 $db['default']['database'] = 'csr_fund';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

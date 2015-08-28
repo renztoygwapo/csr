@@ -11,7 +11,7 @@ class Home extends CI_Controller {
         if ("$remark" == 'out' || "$remark" == "") {
             $this->load->model('Query');
             $users = $this->Query->getUsers();
-            $this->load->view('inc/login', ['users' => $users]);
+            $this->load->view('inc/login', array('users' => $users));
             $this->session->set_userdata('remark', 'out');
         } else {
             $this->login();
@@ -82,7 +82,7 @@ class Home extends CI_Controller {
         );
         $this->load->model('Query');
         $users = $this->Query->getUsers();
-        $this->load->view('inc/signup', ['users' => $users]);
+        $this->load->view('inc/signup', array('users' => $users));
     }
 
     public function signin($submit = null) {
@@ -141,7 +141,7 @@ class Home extends CI_Controller {
             'left' => $left,
             'right' => $right
         );
-        $this->load->view('inc/promp_staff_in', ['users' => $array]);
+        $this->load->view('inc/promp_staff_in', array('users' => $array));
     }
 
     public function tcpdf() {
